@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+
+.center{
+  position : fixed;
+  top : 80%;
+  left : 50%;
+  transform: translate(-50%, -50%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.title{
+  position : fixed;
+  top : 20%;
+  left : 50%;
+  transform : translate(-50% , -50%);
+}
+
+.background{
+  background-image: url("./Markdown.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
