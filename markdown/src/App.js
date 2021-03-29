@@ -1,6 +1,15 @@
 import './App.css';
+import { useState } from 'react';
+
 
 function App() {
+
+  const [marked, setMarked] = useState("");
+
+  const updateMarked = (markdown) => {
+    setMarked(markdown);
+  }
+
   return (
     <main>
     <div className="h-screen w-screen background">
@@ -10,13 +19,22 @@ function App() {
       <div className="text-1xl md:text-4xl w-7/8 md:w-3/6 h-2/6 md:h-3/6 text-black font-black text-center bg-white">
         <h1 className="border">Editor</h1>
         <div className="w-full h-full">
-          <textarea className="w-full h-full"></textarea>
+          <textarea 
+          className="w-full h-full"
+          value={marked}
+          onChange={(e) => {
+            updateMarked(e.target.value);
+          }}
+          >
+          
+          </textarea>
+          
         </div>
       </div>
       <div className="text-1xl md:text-4xl bg-white w-7/8 md:w-3/6 h-2/6 md:h-3/6 text-black font-black text-center">
         <h1 className="border">Preview</h1>
       <div className="w-full h-full bg-white">
-        
+          {marked}
       </div>
         </div>
       </div>
